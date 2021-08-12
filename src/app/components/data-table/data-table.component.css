@@ -1,0 +1,29 @@
+.tableDiv{
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 800px;
+    overflow-x: auto;
+  }
+
+/* @media (max-width: 768px) {
+  .float-right-sm {
+    float: right;
+  }
+}
+
+@media (min-width: 769px) {
+  .float-right-lg {
+    float: right;
+  }
+} */
+/* 
+
+@media (min-width: 769px) {
+  .exampleClass  {
+    background-color: lightblue;
+  }
+}  */

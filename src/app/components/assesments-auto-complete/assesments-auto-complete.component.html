@@ -1,0 +1,47 @@
+<form class="example-form" style="padding: 100px;">
+    <mat-form-field class="example-full-width" floatLabel="never" (click)="onClick()">
+        <!-- [matTooltipClass]="checkIfValueisRecommendedDuration() ? 'hide' : 'visible'"
+            [matTooltipDisabled]="checkIfValueisRecommendedDuration()"
+        -->        
+      <input type="number" #tooltipText="matTooltip" class="red-input"
+             name="testingPeriodDuration"   
+             minlength="0" maxlength="2"
+             matInput             
+             [formControl]="testDurationControl"
+             [matAutocomplete]="auto"
+             [matTooltip]="getToolTipMessage()"
+             [matTooltipDisabled]="checkIfValueisRecommendedDuration() && !testDurationControl.invalid ? true : false"
+             matTooltipPosition="before"
+             (paste)="false"
+             (focus)="onFocus()"
+             (input)="onInput(tooltipText)">
+
+            <!--  (paste)="false"
+                 (paste)="convertStringToNumber($event)"
+                (keypress)="keyPressNumbers($event)" -->
+            <!-- (keydown)="onKeyDown($event)" -->
+      <mat-icon matSuffix class="caret-icon">
+        <i class="material-icons align-arrow-right">
+          arrow_drop_down
+        </i> 
+      </mat-icon>
+
+      <mat-autocomplete #autoCompleteRef #auto="matAutocomplete" 
+      (closed)="onAutoCompleteClose()" >
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option" 
+          [ngClass]="option === defaultValue ? 'active-option' : ''">
+            <span [ngClass]="option === defaultValue ? 'highlighted-option' : ''"> 
+              {{option}} 
+            </span>
+        </mat-option>
+      </mat-autocomplete> 
+
+      <!-- <mat-autocomplete #autoComplete
+      autoActiveFirstOption #auto="matAutocomplete" (closed)="onAutoCompleteClose(autoComplete)"
+      (optionSelected)="65">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete> -->
+    </mat-form-field>
+</form>

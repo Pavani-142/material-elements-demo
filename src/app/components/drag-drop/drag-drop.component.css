@@ -1,0 +1,23 @@
+.container{
+    margin: 50px;  
+    display: flex;
+}
+
+.list-style{
+    width: 25%;
+    border: 1px solid red;
+}
+
+.other-list-style{
+    width: 25%;
+    border: 1px solid blue;
+}
+
+.item{
+    height: 150px;
+    width: 100%;
+    border: 1px solid green;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

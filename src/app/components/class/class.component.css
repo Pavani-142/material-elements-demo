@@ -1,0 +1,85 @@
+.header{    
+    background-color: #E5E1DD !important;
+    /* background-color: #9ca4ab; 
+    background-color: #6e6e6e;  */
+    background-color: #f4f4f4; 
+    height: 50px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+
+::ng-deep mat-dialog-container {
+    padding: 0px !important;
+}
+
+/* ::ng-deep mat-dialog-content, mat-dialog-actions {
+    margin: 25px !important;
+} */
+
+/* .content{
+    margin: 30px !important;
+} */
+
+mat-form-field{
+    width: 100%;
+}
+
+.backdropBackground{
+    background-color: white;
+}
+
+/* .customButton{
+    float: right;
+} */
+
+/* ::placeholder{
+    color: red;
+} */
+
+/* ::placeholder:read-write, ::placeholder:required {
+    color: red;
+  } */
+
+/* .required::after{
+    color: red !important;
+}  */
+
+/* :required
+{
+    color: red !important;
+} */
+
+::ng-deep .mat-focused .mat-form-field-required-marker { color: #dd3c49 }
+
+::ng-deep .mat-form-field-required-marker { color: #dd3c49 }
+
+::ng-deep .customSaveButton{
+    color: rgb(0,0,0, 0.38) !important;
+}
+
+.settings {
+    height: 100%;
+    width: 100%;
+    /* position: absolute;
+    color: rgba(0, 0, 0, 0.87) !important;
+    font-weight: 400; */
+}
+
+.content {
+    margin: 30px !important;
+    padding: 0px !important;
+    flex-direction: column;
+    height: 1%;
+    min-height: 125px;
+    flex-grow: 1;
+    /* overflow: auto; */
+    /* padding: 0 15px; */
+    width: 100%;
+}
+
+
+.footer {
+    float: right;
+    /* padding-top: 15px; */
+    width: 100%;
+}

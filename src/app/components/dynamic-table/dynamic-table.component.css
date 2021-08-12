@@ -1,0 +1,13 @@
+.example-container {
+    height: 400px; 
+    min-width: 650px;
+    overflow: auto;
+  }
+  
+table {
+    width: 100% !important;
+}
+
+th, td{
+  width: 20px !important;
+}

@@ -1,0 +1,57 @@
+
+.example-full-width {
+    width: 50px;
+}
+
+.align-arrow-right {
+    position: absolute;
+    right: 0;
+}
+
+.mat-icon{
+    height: 18px;
+}
+
+.mat-form-field-invalid .caret-icon {
+    color: #f44336 !important; 
+    /* #DF4545 */
+}
+
+::ng-deep .visible{
+    display: block;
+}
+
+::ng-deep .hide{
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #2196f3;
+}
+
+/* ::ng-deep .mat-option.mat-active{
+	color: #2196f3 !important;
+} */
+
+::ng-deep .mat-form-field.mat-focused .caret-icon{
+    color: #2196f3;
+}
+
+.highlighted-option{
+    color: #2196f3 !important;
+}
+
+.active-option{
+    background-color: rgba(0,0,0,.04) !important;
+}

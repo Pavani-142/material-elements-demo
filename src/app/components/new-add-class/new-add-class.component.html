@@ -1,0 +1,53 @@
+<!-- <mat-card *ngIf="showProgressSpinner" class="spinnerCard">
+    <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+</mat-card> -->
+
+<div class="d-flex settings flex-column">
+
+    <!-- <div *ngIf="showProgressSpinner" class="col-lg-12 spinnerCard">
+        <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+    </div> -->
+
+    <h4 mat-dialog-title color="primary" class="header"> Add Class </h4> 
+
+    <div *ngIf="showProgressSpinner" class="d-flex mat-spinner-wrap">
+        <div class="d-flex align-items-center w-100 h-100">
+            <div class="mx-auto">
+                <mat-progress-spinner color="primary" mode="indeterminate"></mat-progress-spinner>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="total-content">  -->
+    <div class="d-flex content">
+        <form [formGroup]="classForm">
+            <mat-dialog-content>
+                <!-- <div class="row"> -->
+                    <mat-form-field class="w-100">
+                        <mat-select placeholder="Lead Faculty" formControlName="facultyName" required>
+                            <mat-option *ngFor="let faculty of facultyList" [value]="faculty.name">
+                                {{faculty.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field> 
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                    <mat-form-field class="w-100">
+                        <input matInput placeholder="Bell Schedule/Period" formControlName="bellPeriod" maxlength="20" required>                  
+                    </mat-form-field>    
+                <!-- </div> -->
+            </mat-dialog-content>
+        </form>    
+    </div>
+     <!-- <mat-dialog-actions class="customButton"> -->
+    <!-- <mat-dialog-actions> -->
+        <div class="footer pt-4">
+            <div class="float-right">
+                <button type="button" mat-flat-button class="cancelButton" (click)="cancel()">Cancel</button>
+                <button mat-flat-button class="mat-primary"
+                    [disabled]="classForm.invalid" (click)="save()">Save</button>
+            </div>      
+        </div>
+    <!-- </mat-dialog-actions>  -->
+    <!-- </div> -->
+</div>

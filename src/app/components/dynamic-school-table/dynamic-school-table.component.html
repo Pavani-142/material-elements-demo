@@ -1,0 +1,59 @@
+
+<div class="example-container">
+
+    <table mat-table [dataSource]="dataSource">
+  
+        <ng-container matColumnDef="{{this.rowHeader}}" sticky>
+            <th mat-header-cell *matHeaderCellDef> {{rowHeader | uppercase}}  </th>
+            
+            <td mat-cell *matCellDef="let element; let i =index; ">
+              {{element.name}} 
+              <!-- <div *ngIf="i != 0; else firstRow"> {{element.schoolName}}  </div>
+              <ng-template #firstRow> {{ "All" | uppercase}} </ng-template> -->
+            </td>
+        </ng-container>
+  
+        <!-- <ng-container *ngFor="let test of unitTests | keyvalue" [matColumnDef]="'UT'+test.value.id">
+            <th mat-header-cell *matHeaderCellDef> {{ test.value.name | uppercase}} </th>
+            <td mat-cell *matCellDef="let element; let i = index;">   
+          
+                <div *ngIf="element.grades.has(test.key)">
+                {{ element.grades.get(test.key).score }}
+                </div>
+                <div *ngIf="!element.grades.has(test.key)">
+                NO SCORE
+                </div>                
+            </td>
+        </ng-container> -->
+        <ng-container *ngFor="let test of localUnitTestArray" [matColumnDef]="'UT'+test.id">
+            <th mat-header-cell *matHeaderCellDef> {{ test.name | uppercase}} </th>
+            <td mat-cell *matCellDef="let element; let i = index;">   
+          
+                <div *ngIf="element.grades && element.grades.has(test.id)">
+                <!-- {{ element.grades.get(test.id).score | number:'1.0-0' }}% -->
+                {{ element.grades.get(test.id).score }}%
+                <span matTooltip="Students Attempted {{ element.grades.get(test.id).totalStudentsAttempted }} ; 
+                Total Students {{ element.grades.get(test.id).totalStudents }} ">
+                    <mat-icon>info</mat-icon>
+                </span>
+                </div>
+                <div *ngIf="!element.grades || !element.grades.has(test.id)">
+                --
+                </div>                
+            </td>
+        </ng-container>
+        
+        <ng-container matColumnDef="action" stickyEnd>
+            <th mat-header-cell *matHeaderCellDef> {{ "action" | uppercase}} </th>
+            <td mat-cell *matCellDef="let i = index;">        
+                <!-- <mat-icon>remove_red_eye</mat-icon> -->
+                <div *ngIf="i == 0 &&  paginator.pageIndex == 0; else firstRow" > -- </div>               
+                <ng-template  #firstRow> <mat-icon>remove_red_eye</mat-icon> </ng-template >
+            </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+  </div> 

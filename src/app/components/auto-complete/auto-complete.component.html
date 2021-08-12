@@ -1,0 +1,33 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width" floatLabel="never">
+        <!-- [matTooltipClass]="checkIfValueisRecommendedDuration() ? 'hide' : 'visible'"
+            [matTooltipDisabled]="checkIfValueisRecommendedDuration()"
+        -->        
+      <input type="text" #tooltipText="matTooltip" name="testingPeriodDuration"   
+             maxlength="7"
+             class="textDuationInput"
+             matInput             
+             [formControl]="testingDurationControl"
+             [matAutocomplete]="auto"
+             [matTooltip]="getToolTipMessage()"
+             [matTooltipDisabled]="checkIfValueisRecommendedDuration() && !testingDurationControl.invalid ? true : false"
+             matTooltipPosition="above"
+             (keyup)="onKeyUp($event, tooltipText)"
+             (keypress)="keyPressNumbers($event)"
+             (paste)="false">
+
+            <!-- (keypress)="keyPressNumbers($event)" -->
+            <!-- (keydown)="onKeyDown($event)" -->
+      <mat-icon matSuffix class="caret-icon">
+        <i class="material-icons align-arrow-right">
+          arrow_drop_down
+        </i> 
+      </mat-icon>
+
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (closed)="onAutoCompleteClose()">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+</form>

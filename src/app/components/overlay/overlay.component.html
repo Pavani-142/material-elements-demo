@@ -1,0 +1,23 @@
+<!-- This button triggers the overlay and is it's origin -->
+<button (mouseover)="OpenDialog(true)" (mouseleave)="OpenDialog(true)" type="button" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+    Hover me
+  </button>
+  
+  <ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="trigger"
+    [cdkConnectedOverlayOpen]="isOpen" 
+    [cdkConnectedOverlayPositions]="positions">
+    <div style="background-color: red;"> HIIII </div>
+  </ng-template>
+  
+
+   <!-- <div class="top" cdk-scrollable>
+    <div class="space"></div>
+    <button type="button" cdkOverlayOrigin #itemMenuTrigger="cdkOverlayOrigin" (click)="open =!isOpen">Click here</button>
+    <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="itemMenuTrigger" [cdkConnectedOverlayOpen]="isOpen" [cdkConnectedOverlayPositions]="positions">
+      <div class="oo">content</div>
+    </ng-template>
+    <div class="space"></div>
+    </div> -->
+    

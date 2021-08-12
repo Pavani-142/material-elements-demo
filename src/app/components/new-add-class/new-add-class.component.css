@@ -1,0 +1,144 @@
+.header{    
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    /* height: 10%; */
+    height: 60px;
+    /* min-height: 60px;     */
+    padding-left: 25px;
+    font-weight: 500 !important;
+    color: #141414;
+}
+
+.settings {
+    height: 100%;
+    width: 100%;
+}
+
+.total-content{
+    /* height: 100%;
+    width: 100%; */
+    padding: 0px 25px 0px 0px !important;
+}
+
+.content{
+    /* padding: 0px 0px 0px 25px !important; */
+    padding: 0px 25px 0px 25px !important;
+    flex-direction: column;
+    height: 1%;
+    min-height: 125px;
+    /* flex-grow: 1; */
+    overflow: auto;
+    /* padding: 0 15px; */
+    width: 100%;
+    /* position: relative; */
+}
+
+/* mat-form-field{
+    width: 100%;
+    font-weight: 400 !important;
+} */
+
+.customButton{
+    margin-top: 35px;
+    float: right;
+}
+
+
+.footer {
+    /* float: right; */
+    /* padding-top: 15px; */
+    width: 100%;
+    /* padding-top: 25px; */
+    padding-right: 25px;
+    padding-bottom: 25px;
+}
+
+.cancelButton{
+    margin-right: 3px !important;
+    color: blue;
+} 
+
+.mat-flat-button{
+    line-height: 40px;
+    border-radius: 2px;
+}
+
+::ng-deep mat-dialog-container{
+    padding: 0px !important;
+    position: relative;
+}
+
+.h-100-new{
+    /* height: calc(45vh - 60px) !important; */
+    height: calc(100% - 60px) !important; 
+}
+
+.mat-spinner-wrap {
+    position: absolute !important;
+    width: 100%;
+
+    /* header size */
+    margin-top: 60px;
+    
+    /* popup height - 60px */
+    /* height: calc(45vh - 60px) !important;  */
+    height: calc(100% - 60px) !important; 
+
+    /* min height: 350 px (min height of popup) - 60px (header)  */
+    /* min-height: 290px; */
+
+    /* margin-top: calc(45vh - 60px) !important; */
+    /* height: 100%; */
+
+    background-color: #ffffff;
+    opacity: 0.85;
+    z-index: 1;
+}
+
+/* .spinnerCard {
+    background: red none repeat scroll 0% 0%; 
+    position: absolute; 
+    left: 0px; 
+    top: 0px; 
+    height: 100%; 
+    z-index: 1; 
+    right: 0px; 
+    margin: 0px auto;
+} */
+
+
+.spinnerCard1 {
+    /* flex-grow: 1;
+    flex-direction: column;
+    overflow: auto; */
+/* 
+    height: 1%;
+    min-height: 125px; */
+
+    position: absolute !important;
+    width: 100%;
+    top: 60px;
+    height: calc(100% - 60px);
+
+    /* height: 100%; */
+
+    /* top: 10%;
+    height: calc(100% - 10%); */
+    overflow: hidden;
+    background-color: yellow;
+    opacity: 0.85;
+    z-index: 99;
+}
+
+/* 
+.mat-progress-spinner {
+    //next 2 lines are commented
+    left: 50%;
+    top: 40%;
+    top: 60px;
+
+    // commented
+    top: 10%;
+    margin: auto;
+} */

@@ -1,0 +1,50 @@
+<form class="example-form" style="padding: 100px;">
+    <mat-form-field class="example-full-width" floatLabel="never">
+      <mat-label>45 Mins</mat-label>
+      <!-- placeholder="45 Mins" -->
+      <!-- [cdkDropListAutoScrollDisabled]="" 
+        autocomplete="new-testingPeriodDuration"  
+      -->
+      <input type="text" #tooltipText="matTooltip" name="testingPeriodDuration"   
+             maxlength="7"
+             class="textDuationInput"
+             matInput             
+             [formControl]="testingDurationControl"
+             [matAutocomplete]="auto"
+             [matTooltip]="getToolTipMessage()"
+             [matTooltipPosition]="'above'"
+             (keyup)="onInput($event, tooltipText)">
+             <!-- (blur)="onOutFocus()"> -->
+             <!-- [matTooltipDisabled]="!myControl.invalid"> -->
+
+      <mat-icon matSuffix class="caret-icon">
+        <i class="material-icons align-arrow-right">
+          arrow_drop_down
+        </i> 
+      </mat-icon>
+
+      <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" role="combobox"
+      (optionSelected)="onOptionSelect()" (closed)="onAutoCompleteClose()">
+      <!-- [displayWith]="displayWith"> -->
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
+
+  <!-- 
+    <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+
+      <i class="material-icons align-arrow-right" 
+        [ngClass]="showCaretInRedColor === true ? 'red-color' : ''">
+        arrow_drop_down
+      </i>  
+
+      <mat-icon matSuffix class="caret-icon" style="height: 18px">
+        <i class="material-icons align-arrow-right" 
+          [ngClass]="showCaretInRedColor === true ? 'red-color' : ''">
+          arrow_drop_down
+        </i> 
+      </mat-icon>
+  -->

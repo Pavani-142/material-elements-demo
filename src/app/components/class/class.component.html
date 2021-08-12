@@ -1,0 +1,72 @@
+<!-- <div class="d-flex settings flex-column">
+    <h1 mat-dialog-title color="primary" class="header"> {{ data.title }} </h1> 
+    
+    <div class="content d-flex body">
+        <mat-dialog-content>
+            
+            <form [formGroup]="classForm">
+                <mat-form-field>
+                    <mat-select placeholder="Lead Faculty" formControlName="facultyName" required  panelClass="testClass" (selectionChange)="selectionChange($event)">
+                        <mat-option *ngFor="let faculty of facultyList" [value]="faculty.name">
+                            {{faculty.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> 
+                <mat-form-field>
+                    <input matInput placeholder="Bell Schedule/Period" (input)="disableButton($event)" maxlength="20" formControlName="bellPeriod" required>
+                </mat-form-field>
+            </form>
+        </mat-dialog-content>
+   
+       
+    </div>
+    <mat-dialog-actions class="customButton footer">
+        <button class="mat-flat-button"(click)="cancel()">Cancel</button>
+        <button type="submit" [disabled]="!classForm.valid || (!classForm.dirty || disabled)" class="mat-raised-button mat-primary ml-8 customSaveButton" (click)="save()">Save</button>
+    </mat-dialog-actions>
+</div> -->
+
+<!-- <mat-card>
+    <mat-card-title>
+        Card title
+    </mat-card-title>
+    <mat-card-content>
+        This is the card content
+    </mat-card-content>
+    <mat-card-actions align="end">
+        <button mat-flat-button> Login </button>
+    </mat-card-actions>
+</mat-card> -->
+
+
+
+<div class="d-flex settings flex-column">
+    <h1 mat-dialog-title color="primary" class="header"> {{ data.title }} </h1> 
+    
+    <div class="content d-flex">
+        <mat-dialog-content >
+            
+            <form [formGroup]="classForm">
+                <mat-form-field>
+                    <mat-select placeholder="Lead Faculty" formControlName="facultyName" required  panelClass="testClass" (selectionChange)="selectionChange($event)">
+                        <mat-option *ngFor="let faculty of facultyList" [value]="faculty.name">
+                            {{faculty.name}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field> 
+                <mat-form-field>
+                    <input matInput placeholder="Bell Schedule/Period" (input)="disableButton($event)" maxlength="20" formControlName="bellPeriod" required>
+                </mat-form-field>
+            </form>
+        </mat-dialog-content>
+   
+       
+    </div>
+    <mat-dialog-actions class="customButton footer">
+        <button class="mat-flat-button"(click)="cancel()">Cancel</button>
+        <button type="submit" [disabled]="!classForm.valid || (!classForm.dirty || disabled)" class="mat-raised-button mat-primary ml-8 customSaveButton" (click)="save()">Save</button>
+    </mat-dialog-actions>
+</div>
+
+
+

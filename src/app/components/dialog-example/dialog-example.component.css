@@ -1,0 +1,54 @@
+/* ::ng-deep mat-dialog-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+::ng-deep mat-dialog-content{
+    display: flex;
+    flex-grow: 1;
+}
+
+::ng-deep mat-dialog-actions{
+    display: flex;
+    flex-grow: 1;
+} */
+.header{    
+    display: flex;
+    align-items: center;
+    background-color: #d9d9d9;
+    height: 60px;    
+    padding-left: 25px;
+    font-weight: 500 !important;
+    color: #141414;
+    width: 100%;
+}
+/* 
+::ng-deep mat-dialog-container{
+    padding: 0px !important;
+}  */
+
+.settings {
+    height: 100%;
+    width: 100%;
+    /* position: absolute;
+    color: rgba(0, 0, 0, 0.87) !important;
+    font-weight: 400; */
+}
+
+.body {
+
+    /* height: 1%;
+    min-height: 125px; */
+    flex-grow: 1;
+    overflow: auto;
+    padding: 0 15px;
+    width: 100%;
+}
+
+
+.footer {
+
+    padding: 15px;
+    width: 100%;
+}

@@ -1,0 +1,13 @@
+table {
+    width: 100% !important;
+    /* min-width: 500px; */
+}
+
+td{
+  /* padding: 30px; */
+  min-width: 100px;
+}
+
+.example-container {
+  overflow: auto;  
+}

@@ -1,0 +1,43 @@
+/* .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  } */
+
+.student-scoring{
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  width: 520px;
+}
+
+.indi-wrap {
+  padding-bottom: 10px;
+  display: block;
+}
+
+.indi-wrap > * {
+    display: inline-block !important;
+    max-width: 70%;
+    vertical-align: top;
+}
+
+::ng-deep .example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: justify;
+}
+
+::ng-deep .example-radio-button {
+  margin: 5px;
+  white-space: normal !important;
+}
+
+::ng-deep .example-radio-button > * {
+  white-space: normal !important;
+}
+
+.example-selected-value {
+  margin: 15px 0;
+}

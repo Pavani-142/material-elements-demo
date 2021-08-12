@@ -1,0 +1,30 @@
+
+.example-full-width {
+    width: 90px;
+}
+
+.textDuationInput{
+    text-transform: capitalize;
+}
+
+.align-arrow-right {
+    position: absolute;
+    right: 0;
+}
+
+.mat-icon{
+    height: 18px;
+}
+
+.mat-form-field-invalid .caret-icon {
+    color: #f44336; 
+    /* #DF4545 */
+}
+
+::ng-deep .visible{
+    display: block;
+}
+
+::ng-deep .hide{
+    display: none;
+}

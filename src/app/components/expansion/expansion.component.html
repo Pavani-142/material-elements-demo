@@ -1,0 +1,15 @@
+<mat-expansion-panel [expanded]=true *ngFor="let video of videos; let i = index">
+    <mat-expansion-panel-header>
+        <mat-panel-title> video.title </mat-panel-title>
+        <mat-panel-description> video.description </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p> This is the panel content. Add course details. </p>
+    <mat-action-row>
+        <button mat-button> Enroll </button>
+    </mat-action-row>
+    <mat-progress-bar mode="determinate"
+        class="video-progress-bar"
+        value="{{getUserProgressInPercentage(video)}}">                      
+    </mat-progress-bar>
+</mat-expansion-panel>

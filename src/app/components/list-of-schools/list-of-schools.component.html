@@ -1,0 +1,45 @@
+<mat-form-field>
+    <input 
+    matInput 
+    (keyup)="applyFilter($event.target.value)"
+    placeholder="Filter">
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="school">
+      <th mat-header-cell *matHeaderCellDef> SCHOOL </th>
+      <td mat-cell *matCellDef="let schoolInfo"> {{schoolInfo.schoolName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="classes">
+      <th mat-header-cell *matHeaderCellDef> CLASSES </th>
+      <td mat-cell *matCellDef="let schoolInfo"> {{schoolInfo.noOfclasses}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="licensesAssigned">
+      <th mat-header-cell *matHeaderCellDef> LICENSES ASSIGNED </th>
+      <td mat-cell *matCellDef="let schoolInfo"> {{schoolInfo.noOflicensesAssigned}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="action" class="right">
+      <th mat-header-cell *matHeaderCellDef> ACTION </th>
+      <td mat-cell *matCellDef="let schoolInfo"> 
+        <!-- <mat-icon
+            matTooltip="View School" 
+            (click)="ViewSchool(schoolInfo.schoolId)"
+            style="cursor: pointer; outline-color: violet; ">
+                visibility
+        </mat-icon> -->
+        <button mat-button> <i class="fal fa-lg fa fa-eye"> </i> </button>
+        <!-- <span class="material-icons">
+          visibility
+          </span>  -->
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnNames"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnNames;"></tr>
+  </table>
+  
+  

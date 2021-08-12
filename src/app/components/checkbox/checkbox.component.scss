@@ -1,0 +1,43 @@
+// ::ng-deep .mat-checkbox-checked .mat-checkbox-checkmark {
+//     color: green;
+//     opacity: 1;
+// }
+
+
+// ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-accent .mat-pseudo-checkbox-checked, .mat-accent .mat-pseudo-checkbox-indeterminate, .mat-pseudo-checkbox-checked, .mat-pseudo-checkbox-indeterminate {
+//     background-color: red !important; /* Red background for example */
+// }
+
+
+
+::ng-deep .mat-checkbox .mat-checkbox-background {
+    background-color: white;
+    border: 0.6px solid blue;
+  }
+
+
+//   ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-checkmark {
+//     background-color: white;
+//     border: 0.6px solid blue;
+// }
+
+
+// ::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+//     background-color: white;
+//     border: 0.6px solid blue;
+//   }
+
+::ng-deep .mat-checkbox .mat-checkbox-checkmark-path {
+  stroke: blue !important;
+} 
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+  background-color: white !important;
+  border: 0.6px solid blue !important;
+}
+
+// .CheckBoxStyling{
+//   background-color: white;
+//   border: 0.6px solid blue;
+//   stroke: blue !important;
+// }

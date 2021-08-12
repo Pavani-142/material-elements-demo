@@ -1,0 +1,15 @@
+.annotation-icon {
+    position: absolute;
+    z-index: 2;
+    margin-top: 3px;
+    color: #1E88E5;
+    font-size: 18px;
+}
+
+#element_in_p{
+    color: red;
+}
+
+#element_in_p2{
+    color: red;
+}
